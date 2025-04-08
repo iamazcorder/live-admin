@@ -87,6 +87,7 @@ export const useUserStore = defineStore('user', {
     async getUserInfo() {
       try {
         const { code, data }: any = await fetchUserInfo();
+        console.log(data, '!!!!');
         this.setUserInfo(data);
         this.setRoles(data.roles);
         return { code, data };

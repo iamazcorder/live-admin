@@ -27,6 +27,8 @@ router.beforeEach(async (to, _from, next) => {
     if (to.path === '/login') {
       next('/');
     }
+    console.log(roles, ';;;');
+    next();
     // 判断用户有没有角色
     if (roles?.value && roles.value.length) {
       next();
@@ -38,7 +40,7 @@ router.beforeEach(async (to, _from, next) => {
       }
       if (!data.roles || !data.roles.length) {
         next(false);
-        window.$message.error('你没有角色');
+        // window.$message.error('你没有角色');
         return;
       }
       const routeRes = userStore.generateAsyncRoutes(data.roles);

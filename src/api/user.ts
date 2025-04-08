@@ -11,14 +11,15 @@ export function fetchLogin({ id, password }) {
 }
 export function fetchUserNameLogin({ username, password }) {
   return request.instance({
-    url: '/user/username_login',
+    url: '/adminUser/login',
     method: 'post',
     data: { username, password },
   });
 }
 
 export function fetchUserInfo() {
-  return request.get('/user/get_user_info');
+  console.log('fetch user info');
+  return request.get('/adminUser/get_user_info');
 }
 
 export function fetchUserList(params) {

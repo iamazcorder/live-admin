@@ -1,7 +1,7 @@
 import axios, { Axios, AxiosRequestConfig } from 'axios';
 
 import { AXIOS_BASEURL } from '@/constant';
-import { useUserStore } from '@/stores/user';
+// import { useUserStore } from '@/stores/user';
 import { getCurrEnv, getToken } from '@/utils/localStorage';
 
 export interface MyAxiosPromise<T = any>
@@ -80,10 +80,11 @@ class MyAxios {
             window.$message.error(error.message);
             return Promise.reject(error.message);
           }
-          if (rspStatusCode === 401) {
-            const userStore = useUserStore();
-            userStore.logout();
-          }
+          // if (rspStatusCode === 401) {
+          //   const userStore = useUserStore();
+          //   userStore.logout();
+          //   // console.log(userStore)
+          // }
           if (rspStatusCode === 500) {
             window.$message.error(errorMessage);
           }

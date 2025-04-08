@@ -72,6 +72,7 @@ const { t } = useI18n();
 //   'component'
 // );
 const handleRoutes = (routes: RouteRecordRaw[]) => {
+  console.log(routes, '??????');
   routes.forEach((v) => {
     if (v.meta?.oneChildren && v.children) {
       v.meta = {

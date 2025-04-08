@@ -172,6 +172,7 @@ const handleLogin = async () => {
       password: loginForm.value.password,
     });
   }
+
   if (token) {
     window.$message.success('登录成功!');
     router.push((route.query.redirect as '') || '/');

@@ -28,6 +28,7 @@ export default nameSpaceWrap('router', {
   user: '用户管理',
   userList: '用户列表',
   userAdd: '新增用户',
+  hostReview: '主播审核',
 
   role: '角色管理',
   roleList: '角色列表',

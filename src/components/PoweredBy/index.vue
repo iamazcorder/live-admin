@@ -1,6 +1,6 @@
 <template>
   <div class="powered-by">
-    <span>Powered by</span>
+    <!-- <span>Powered by</span>
     <span class="author">
       <a
         :href="GITHUB_REPO"
@@ -8,13 +8,11 @@
       >
         galaxy-s10
       </a>
-    </span>
+    </span> -->
   </div>
 </template>
 
-<script lang="ts" setup>
-import { GITHUB_REPO } from '@/constant';
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped>
 .powered-by {
@@ -31,9 +29,11 @@ import { GITHUB_REPO } from '@/constant';
   line-height: 40px;
 
   user-select: none;
+
   .author {
     margin-left: 10px;
     font-weight: bold;
+
     a {
       color: inherit;
       text-decoration: none;
